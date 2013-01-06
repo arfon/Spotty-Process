@@ -1,0 +1,68 @@
+#centre{
+	width:900px;
+  margin:40px auto;
+	min-height:600px;
+}
+
+#header{
+	
+}
+
+#centre img{
+	padding:20px 0px;
+}
+
+h1{
+	font-family:Georgia, serif;
+	font-weight:lighter;
+}
+
+h3{
+	font-family:Georgia, serif;
+	font-weight:lighter;
+	font-size:1.3em;
+}
+
+.dialog{
+  font-style: italic;
+  font-size: 0.7em;
+}
+
+p, ul, ul li, ol, ol li, blockquote{
+	font-family:helvetica, arial, sans-serif;
+	font-size:1em;
+	line-height:1.3em;
+}
+
+p.preface{
+	font-style:italic;
+	font-size:0.9em;
+	border:1px solid #efefef;
+	background: #ffff99;
+	padding:5px;
+}
+
+p.footnote{
+	font-size:0.8em;
+	
+}
+
+blockquote{
+	font-size:0.9em;
+	font-style: italic;
+}
+
+blockquote.statement{
+	font-size: 1.1em;
+	background: #efefef;
+	padding:10px;
+}
+
+.posted{
+	font-size: 0.9em;
+	font-style: italic;
+}
+
+.gist{
+	font-size: 0.9em;
+}

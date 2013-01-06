@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>Spotty Process - AWS Spot price tracking</title>
+  <link href='styles.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+  <div id="centre">
+    <h1>Spotty Process</h1>
+    <p>A little application to help you choose where to spin up an <AWS Spot instance.</p>
+    <p>This application doesn't do a huge amount - it stores an 'InstanceType' for each unique instance size/region/OS permutation and then polls the <a href="http://aws.amazon.com/ec2/spot-instances/" target="_blank">AWS Spot API</a> every 10 minutes and keeps a record of the current price of that instance. Currently it only polls US-East but this could be easily updated by changing the API request parameters in the cron runner.</p>
+    
+    <h3>&raquo; Available methods</h3>
+    <p><strong>Price for a given instance size in all availability zones</strong> - the most straightforward operation is to get all pricings for a given instance type.</p>
+    
+    <script src="https://gist.github.com/4469800.js"></script>
+    
+    <p><strong>All instances in a given availability zone</strong></p>
+    
+    <script src="https://gist.github.com/4469842.js"></script>
+    
+    <p><strong>Price for a given instance size in a single availability zone</strong></p>
+    
+    <script src="https://gist.github.com/4469886.js"></script>
+    
+    <p><strong>Cheapest price for a given instance type <em>right now</em></strong></p>
+    
+    <script src="https://gist.github.com/4470136.js"></script>
+    
+    <p>This final method is potentially the most useful<sup>1</sup>. The idea being that you may need a m1.large but don't know what price to bid. This method returns the current cheapest price for a given instance type for both Linux and Windows flavours.</p>
+    
+    <p class="footnote"><sup>1</sup>It's worth noting that these prices may be up to 10 minutes out of date on http://spot.arfon.org as the cron only runs this often.</p>
+  </div>
+</body>
