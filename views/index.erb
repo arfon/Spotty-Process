@@ -12,8 +12,11 @@
 <body>
   <div id="centre">
     <h1>Spotty Process</h1>
-    <p>A little application to help you choose where to spin up an <AWS Spot instance.</p>
+    <p>A little application to help you choose where to spin up an AWS Spot instance.</p>
     <p>This application doesn't do a huge amount - it stores an 'InstanceType' for each unique instance size/region/OS permutation and then polls the <a href="http://aws.amazon.com/ec2/spot-instances/" target="_blank">AWS Spot API</a> every 10 minutes and keeps a record of the current price of that instance. Currently it only polls US-East but this could be easily updated by changing the API request parameters in the cron runner.</p>
+    
+    <h3>&raquo; Get the Code!</h3>
+    <p>You can download the code for this application <a href="https://github.com/arfon/Spotty-Process">here</a>.</p>
     
     <h3>&raquo; Available methods</h3>
     <p><strong>Price for a given instance size in all availability zones</strong> - the most straightforward operation is to get all pricings for a given instance type.</p>
