@@ -13,14 +13,13 @@
 }
 
 h1{
-	font-family:Georgia, serif;
-	font-weight:lighter;
+	font-family:Helvetica, sans-serif;
+	font-weight:bold;
 }
 
 h3{
-	font-family:Georgia, serif;
-	font-weight:lighter;
-	font-size:1.3em;
+	font-family:Helvetica, sans-serif;
+	font-size:1.2em;
 }
 
 .dialog{
